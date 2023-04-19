@@ -1,7 +1,7 @@
 Name:           libkqueue
-Version:        2.5.0
+Version:        2.6.1
 Release:        1%{?dist}
-Summary:        kqueue(2) compatibility library 
+Summary:        kqueue compatibility library
 
 License:        MIT and BSD
 URL:            https://github.com/mheily/libkqueue
@@ -12,13 +12,12 @@ BuildRequires:  cmake
 
 %package devel
 Summary:        Development files for %{name}
-BuildArch:      noarch
 
 %description devel
 Development files for %{name}
 
 %description
-A user space implementation of the kqueue(2) kernel event notification mechanism libkqueue acts
+A user space implementation of the kqueue kernel event notification mechanism libkqueue acts
 as a translator between the kevent structure and the native kernel facilities on Linux, Android,
 Solaris, and Windows.
 
@@ -38,7 +37,7 @@ Solaris, and Windows.
 %files
 %license LICENSE
 %doc README.md BUGS.md
-%{_libdir}/libkqueue.so.2.5.0
+%{_libdir}/libkqueue.so.0
 
 %files devel
 %{_includedir}/kqueue/
@@ -47,7 +46,9 @@ Solaris, and Windows.
 %{_mandir}/man2/kqueue.2.*
 
 %changelog
+* Wed Apr 19 2023 Jan Drögehoff <sentrycraft123@gmail.com> - 2.6.1-1
+- Update to 2.6.1
+
 * Sun Mar 06 2022 Jan Drögehoff <sentrycraft123@gmail.com> - 2.5.0-1
 - initial spec
-
 
