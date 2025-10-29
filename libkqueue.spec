@@ -1,5 +1,5 @@
 Name:           libkqueue
-Version:        2.6.1
+Version:        2.6.3
 Release:        1%{?dist}
 Summary:        kqueue compatibility library
 
@@ -9,6 +9,12 @@ Source0:        %{url}/archive/v%{version}.tar.gz#/%{name}-v%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  cmake
+
+%package static
+Summary:        Static library for %{name}
+
+%description static
+Static library for %{name}
 
 %package devel
 Summary:        Development files for %{name}
@@ -39,6 +45,9 @@ Solaris, and Windows.
 %doc README.md BUGS.md
 %{_libdir}/libkqueue.so.0
 
+%files static
+%{_libdir}/libkqueue.a
+
 %files devel
 %{_includedir}/kqueue/
 %{_libdir}/libkqueue.so
@@ -46,6 +55,9 @@ Solaris, and Windows.
 %{_mandir}/man2/kqueue.2.*
 
 %changelog
+* Wed Oct 29 2025 Jan200101 <sentrycraft123@gmail.com> - 2.6.3-1
+- Update to 2.6.3
+
 * Wed Apr 19 2023 Jan Drögehoff <sentrycraft123@gmail.com> - 2.6.1-1
 - Update to 2.6.1
 
