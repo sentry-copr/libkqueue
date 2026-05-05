@@ -1,5 +1,5 @@
 Name:           libkqueue
-Version:        2.6.3
+Version:        2.7.0
 Release:        1%{?dist}
 Summary:        kqueue compatibility library
 
@@ -55,6 +55,9 @@ Solaris, and Windows.
 %{_mandir}/man2/kqueue.2.*
 
 %changelog
+* Tue May 05 2026 Jan200101 <sentrycraft123@gmail.com> - 2.7.0-1
+- Update to 2.7.0
+
 * Wed Oct 29 2025 Jan200101 <sentrycraft123@gmail.com> - 2.6.3-1
 - Update to 2.6.3
 
